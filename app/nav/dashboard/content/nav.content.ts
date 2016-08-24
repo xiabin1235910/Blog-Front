@@ -4,7 +4,7 @@
 import { Component } from '@angular/core';
 @Component({
     selector: 'nav-content',
-    templateUrl: 'app/nav/nav.content.html'
+    templateUrl: 'app/nav/dashboard/content/nav.content.html'
 })
 export class NavContent {
 

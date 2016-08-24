@@ -5,7 +5,6 @@ import { Component, AfterContentInit } from '@angular/core';
 import {NavFooter} from "./nav/nav.footer";
 import {NavHeader} from "./nav/nav.header";
 import {NavSection} from "./nav/nav.section";
-import {NavContent} from "./nav/nav.content";
 import {NavSponsor} from "./nav/nav.sponsor";
 declare var jQuery:any;
 
@@ -14,11 +13,12 @@ declare var jQuery:any;
     template: `
         <nav-header></nav-header>
         <nav-section></nav-section>
-        <nav-content></nav-content>
+        <!--<nav-dashborad></nav-dashborad>-->
+        <router-outlet></router-outlet>
         <nav-sponsor></nav-sponsor>
         <nav-footer></nav-footer>
     `,
-    directives: [NavHeader, NavSection, NavContent, NavSponsor, NavFooter]
+    directives: [NavHeader, NavSection, NavSponsor, NavFooter]
 })
 export class AppComponent implements AfterContentInit{
 
