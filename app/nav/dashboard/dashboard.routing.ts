@@ -6,6 +6,7 @@ import {NavDashboard} from "./nav.dashboard";
 import {NavContent} from "./content/nav.content";
 import {NavAboutUs} from "./content/nav.aboutus";
 import {NavContact} from "./content/nav.contact";
+import {Nav404} from "./content/nav.404";
 
 const dashboardRoutes:Routes = [
     {
@@ -23,6 +24,10 @@ const dashboardRoutes:Routes = [
             {
                 path: 'contact',
                 component: NavContact
+            },
+            {
+                path: '404',
+                component: Nav404
             },
             {
                 path: '',
