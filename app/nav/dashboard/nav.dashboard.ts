@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     selector: 'nav-dashboard',
     template: `<router-outlet></router-outlet>`
 })
-export class NavDashboard {
-
+export class NavDashboard{
+    constructor(){
+    }
 }

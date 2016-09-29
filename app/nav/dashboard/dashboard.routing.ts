@@ -2,6 +2,7 @@
  * Created by Ben on 8/24/2016.
  */
 import {Routes, RouterModule} from '@angular/router';
+import { ModuleWithProviders } from '@angular/core';
 import {NavDashboard} from "./nav.dashboard";
 import {NavContent} from "./content/nav.content";
 import {NavAboutUs} from "./content/nav.aboutus";
@@ -37,4 +38,4 @@ const dashboardRoutes:Routes = [
     }
 ];
 
-export const dashboardRouting = RouterModule.forChild(dashboardRoutes);
+export const dashboardRouting: ModuleWithProviders  = RouterModule.forChild(dashboardRoutes);

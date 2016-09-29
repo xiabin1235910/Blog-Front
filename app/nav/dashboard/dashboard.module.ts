@@ -12,6 +12,6 @@ import {Nav404} from "./content/nav.404";
 
 @NgModule({
     imports:      [ BrowserModule, dashboardRouting ],
-    declarations: [ NavDashboard, NavContent, NavAboutUs, NavContact, Nav404 ]
+    declarations: [ NavDashboard, NavContent, NavAboutUs, NavContact, Nav404 ],
 })
 export class dashboardModule { }
