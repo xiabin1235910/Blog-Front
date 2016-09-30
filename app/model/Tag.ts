@@ -12,12 +12,6 @@ export class Tag {
         this.createdate = createdate;
     }
 
-    constructor(_tag: Tag){
-        this.id = _tag.id;
-        this.name = _tag.name;
-        this.createdate = _tag.createdate;
-    }
-
     setId(_id: number) {
         this.id = _id;
     }

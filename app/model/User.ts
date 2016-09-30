@@ -3,12 +3,12 @@
  */
 export class User{
     id: number;
-    name: string;
+    username: string;
     createdate: string;
 
-    constructor(id?: number, name?:string, createdate?: string){
+    constructor(id?: number, username?:string, createdate?: string){
         this.id = id;
-        this.name = name;
+        this.username = username;
         this.createdate = createdate;
     }
 
@@ -16,8 +16,8 @@ export class User{
         this.id = _id;
     }
 
-    setName(_name: string) {
-        this.name = _name;
+    setName(_username: string) {
+        this.username = _username;
     }
 
     setCreatedate(_createdate: string) {
@@ -27,7 +27,7 @@ export class User{
     setUser(_user: User) {
         if(_user) {
             this.setId(_user.id);
-            this.setName(_user.name);
+            this.setName(_user.username);
             this.setCreatedate(_user.createdate);
         }
     }
