@@ -20,7 +20,7 @@ export class Blog {
         this.title = _title;
         this.user = new User();
         this.type = new Type();
-        this.tags = new Array<Tag>(5);
+        // this.tags = new Array<Tag>(5);
     }
 
     setId(_id: number) {
@@ -57,9 +57,10 @@ export class Blog {
     
     setTags(_tags: Array<Tag>) {
         // maximum is 5
+        this.tags = new Array<Tag>(_tags.length);
         _tags.forEach((f_tag, index) => {
-            this.tags[index] = new Tag(f_tag);
-        })
+            this.tags[index] = new Tag(f_tag.id, f_tag.name, f_tag.createdate);
+        });
     }
     
     setBlog(_blog: Blog) {

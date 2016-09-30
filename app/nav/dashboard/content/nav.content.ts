@@ -10,7 +10,7 @@ import {Blog} from "../../../model/blog";
     providers: [BlogService]
 })
 export class NavContent implements OnInit {
-    newestBlog: Blog = new Blog('hello world...');
+    blog: Blog = new Blog('hello world...');
 
     constructor(private blogService: BlogService){  //private blogService: BlogService
     }
@@ -19,7 +19,8 @@ export class NavContent implements OnInit {
         this.blogService.getBlogs().subscribe(
             (data) => {
                 console.log(data[0]);
-                this.newestBlog.setBlog(data[0]);
+                this.blog.setBlog(data[0]);
+                console.log(this.blog)
                 // console.log(data[0]);
             },
             (error)=> {

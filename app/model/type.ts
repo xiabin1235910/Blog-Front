@@ -3,12 +3,12 @@
  */
 export class Type {
     id: number;
-    name: string;
+    typename: string;
     createdate: string;
 
-    constructor(id?: number, name?:string, createdate?: string){
+    constructor(id?: number, typename?:string, createdate?: string){
         this.id = id;
-        this.name = name;
+        this.typename = typename;
         this.createdate = createdate;
     }
 
@@ -16,8 +16,8 @@ export class Type {
         this.id = _id;
     }
 
-    setName(_name: string) {
-        this.name = _name;
+    setName(_typename: string) {
+        this.typename = _typename;
     }
 
     setCreatedate(_createdate: string) {
@@ -27,7 +27,7 @@ export class Type {
     setType(_type: Type) {
         if (_type) {
             this.setId(_type.id);
-            this.setName(_type.name);
+            this.setName(_type.typename);
             this.setCreatedate(_type.createdate);
         }
     }
