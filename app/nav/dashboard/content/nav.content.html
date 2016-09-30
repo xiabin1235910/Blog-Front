@@ -107,19 +107,19 @@
                                     <li>
                                         <div class="info">
                                             <p>Posted by:</p>
-                                            <a href="author.html">Waqas Hussain</a> </div>
+                                            <a href="author.html">{{blog.user.username}}</a> </div>
                                     </li>
                                     <li>
                                         <div class="info">
                                             <p>Posted on:</p>
-                                            <strong>Mar 21, 2015</strong></div>
+                                            <strong>{{blog.createdate | date}}</strong></div>
                                     </li>
                                 </ul>
                             </div>
                             <div class="caption">
                                 <h3 class="md-heading"><a href="#">{{blog.title}}</a></h3>
                                 <p> {{blog.content}} </p>
-                                <div class="post-category"> <a href="#"><span>&nbsp;</span> Featured image</a> </div>
+                                <div class="post-category"> <a href="#"><span>&nbsp;</span> {{blog.type.typename}}</a> </div>
                                 <a class="btn btn-default" href="#" role="button">Read More</a> </div>
                         </article>
                     </div>
