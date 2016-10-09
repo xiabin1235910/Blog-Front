@@ -16,11 +16,11 @@ export class BlogService extends BaseService {
 
 
 
-    getBlogs (): Observable<any> {
+    getBlogs (id?: number): Observable<any> {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.get(this.getBlogUrl)
+        return this.http.get(id ? this.getBlogUrl + id : this.getBlogUrl)
             .map(this.extractData)
             .catch(this.handleError);
     }

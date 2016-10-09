@@ -35,7 +35,7 @@
                         </ul>
                     </div>
                     <div class="caption">
-                        <h3><a href="single.html">{{blog.title}}</a></h3>
+                        <h3><a [routerLink]="['/dashboard/single/' + blog.id]" routerLinkActive="active">{{blog.title}}</a></h3>
                         <p> {{blog.contentAbstract}}</p>
                         <div class="post-category"> <a href="#"><span>&nbsp;</span> {{blog.type.typename}}</a> </div>
                         <ul class="list-inline tags">

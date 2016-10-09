@@ -9,9 +9,10 @@ import {NavAboutUs} from "./content/nav.aboutus";
 import {NavContent} from "./content/nav.content";
 import {NavContact} from "./content/nav.contact";
 import {Nav404} from "./content/nav.404";
+import {NavSingle} from "./single/nav.single";
 
 @NgModule({
     imports:      [ BrowserModule, dashboardRouting ],
-    declarations: [ NavDashboard, NavContent, NavAboutUs, NavContact, Nav404 ],
+    declarations: [ NavDashboard, NavContent, NavAboutUs, NavContact, Nav404, NavSingle ],
 })
 export class dashboardModule { }
