@@ -20,18 +20,14 @@ export class NavSingle implements OnInit {
 
     ngOnInit() {
 
-        this.route.params.forEach((params: Params) => {
-            let id = +params['id']; // transfer to number
-            this.blogService.getBlogs(id).subscribe(
-                (data) => {
-                    this.blog.setBlog(data[0]);
-                },
-                (error)=> {
-                    console.log(error)
-                }
-            );
-        });
-
-
+        let id = +this.route.params['id']; // transfer to number
+        this.blogService.getBlogs(id).subscribe(
+            (data) => {
+                this.blog.setBlog(data[0]);
+            },
+            (error)=> {
+                console.log(error)
+            }
+        );
     }
 }
