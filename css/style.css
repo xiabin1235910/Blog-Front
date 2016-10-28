@@ -65,7 +65,9 @@ input:focus, selectl:focus { box-shadow:none; border-color:#0e4da3; outline:none
 textarea.form-control {height: auto;min-height: 200px;}
 /***************Parallax settings********************/
 
-.bgParallax { color:#FFF; margin: 0 auto; text-align:center; width: 100%; max-width: 1920px; position: relative; min-height: 100%; background-position: 50% 0; background-repeat: repeat; background-attachment: fixed; }
+.bgParallax { color:#FFF; margin: 0 auto; text-align:center; width: 100%; max-width: 1920px; position: relative;
+    /*min-height: 100%; */
+    background-position: 50% 0; background-repeat: repeat; background-attachment: fixed; }
 .color-overlay { background: rgba(231, 76, 60, 0.6); position: relative; z-index: 0; }
 .color-overlay.black { background: rgba(0, 0, 0, 0.7); position: relative; z-index: 0; }
 .post iframe{ border:none; width:100%; outline:none;}
