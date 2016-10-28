@@ -10,9 +10,10 @@ import {NavContent} from "./content/nav.content";
 import {NavContact} from "./content/nav.contact";
 import {Nav404} from "./content/nav.404";
 import {NavSingle} from "./single/nav.single";
+import {MomentModule} from 'angular2-moment';
 
 @NgModule({
-    imports:      [ BrowserModule, dashboardRouting ],
+    imports:      [ BrowserModule, dashboardRouting, MomentModule ],
     declarations: [ NavDashboard, NavContent, NavAboutUs, NavContact, Nav404, NavSingle ],
 })
 export class dashboardModule { }
