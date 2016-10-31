@@ -41,7 +41,7 @@
                         <ul class="list-inline tags">
                             <li *ngFor="let tag of blog.tags"><a href="#">{{tag.name}}</a></li>
                         </ul>
-                        <a class="btn btn-default btn-lg" href="#" role="button">Read More</a> </div>
+                        <a class="btn btn-default btn-lg" [routerLink]="['/dashboard/single/' + blog.id]" routerLinkActive="active" role="button">Read More</a> </div>
                 </article>
                 <div class="clearfix"></div>
             </div>
@@ -51,14 +51,14 @@
                         <div class="panel panel-default theme-panel">
                             <div class="panel-heading">Recent Articles</div>
                             <div class="panel-body nopadding">
-                                <div class="media">
+                                <div *ngFor="let blog of blogList" class="media">
                                     <div class="media-left"> <a href="#"> <img src="images/post/rp1.jpg" alt="author" /> </a> </div>
                                     <div class="media-body">
-                                        <h4 class="media-heading"><a href="#">this is long Blog Heading Text Size for recent articles</a></h4>
-                                        <p><a href="#">LifeStyle</a> &bull; 5 hours ago</p>
+                                        <h4 class="media-heading"><a href="#">{{blog.title}}</a></h4>
+                                        <p><a href="#">{{blog.tags[0].name}}</a> &bull; {{blog.createdate | amTimeAgo}}</p>
                                     </div>
                                 </div>
-                                <div class="media">
+                                <!--<div class="media">
                                     <div class="media-left"> <a href="#"> <img src="images/post/rp2.jpg" alt="author" /> </a> </div>
                                     <div class="media-body">
                                         <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
@@ -71,7 +71,7 @@
                                         <h4 class="media-heading"><a href="#">this is Blog Heading Text Size</a></h4>
                                         <p><a href="#">Products</a> &bull; 2 hours ago</p>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,9 @@
                         <div class="panel panel-default theme-panel">
                             <div class="panel-heading">Categories</div>
                             <div class="panel-body nopadding">
-                                <div class="list-group"> <a href="#" class="list-group-item">LifeStyle</a> <a href="#" class="list-group-item">SmartPhones</a> <a href="#" class="list-group-item">Business</a> <a href="#" class="list-group-item">Graphic Design</a> <a href="#" class="list-group-item">Agriculture</a> <a href="#" class="list-group-item">Music</a> <a href="#" class="list-group-item">Travel</a> </div>
+                                <div *ngFor="let tag of tagList" class="list-group">
+                                    <a href="#" class="list-group-item">{{tag.name}}</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -90,7 +92,7 @@
             <div class="col-md-12">
                 <div id="parallax-1" class="bgParallax" data-speed="15">
                     <div class="color-overlay black">
-                        <h3><span>Hot News:</span> The Heading Text Size Should Match With the Size Of The Image</h3>
+                        <h3><span>Hot News:</span> {{blog.title}}</h3>
                     </div>
                 </div>
             </div>
@@ -120,7 +122,7 @@
                                 <h3 class="md-heading"><a href="#">{{blog.title}}</a></h3>
                                 <p> {{blog.content}} </p>
                                 <div class="post-category"> <a href="#"><span>&nbsp;</span> {{blog.type.typename}}</a> </div>
-                                <a class="btn btn-default" href="#" role="button">Read More</a> </div>
+                                <a class="btn btn-default" [routerLink]="['/dashboard/single/' + blog.id]" routerLinkActive="active" role="button">Read More</a> </div>
                         </article>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">

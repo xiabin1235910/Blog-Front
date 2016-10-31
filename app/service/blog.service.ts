@@ -12,8 +12,8 @@ export class BlogService extends BaseService {
     constructor (private http: Http) {
         super();
     }
-    private getBlogUrl: string = 'http://rat051:8080/blog/';  // URL to web API
-
+    private getBlogUrl: string = 'http://rat051:8080/api/blog/';  // URL to web API
+    private getTagUrl: string = 'http://rat051:8080/api/tags/';  // URL to web API
 
 
     getBlogs (id?: number): Observable<any> {
@@ -21,6 +21,15 @@ export class BlogService extends BaseService {
         let options = new RequestOptions({ headers: headers });
 
         return this.http.get(id ? this.getBlogUrl + id : this.getBlogUrl)
+            .map(this.extractData)
+            .catch(this.handleError);
+    }
+    
+    getTags (id?: number): Observable<any> {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        return this.http.get(id ? this.getTagUrl + id : this.getTagUrl)
             .map(this.extractData)
             .catch(this.handleError);
     }
